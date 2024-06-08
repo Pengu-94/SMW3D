@@ -30,3 +30,11 @@
 #include "src/s2d_engine/s2d_config.h"
 #include FONT_C_FILE
 #endif
+
+#include "mario_run_r/model.inc.c"
+#include "mario_run_l/model.inc.c"
+#include "mario_run_f/model.inc.c"
+#include "mario_run_b/model.inc.c"
+#include "mario_jump/model.inc.c"
+#include "mario_idle/model.inc.c"
+#include "mario_fall/model.inc.c"

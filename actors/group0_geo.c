@@ -16,3 +16,11 @@
 #include "water_splash/geo.inc.c"
 #include "sparkle_animation/geo.inc.c"
 #include "mario/geo.inc.c"
+
+#include "mario_run_r/geo.inc.c"
+#include "mario_run_l/geo.inc.c"
+#include "mario_run_f/geo.inc.c"
+#include "mario_run_b/geo.inc.c"
+#include "mario_jump/geo.inc.c"
+#include "mario_idle/geo.inc.c"
+#include "mario_fall/geo.inc.c"

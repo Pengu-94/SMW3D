@@ -33,6 +33,7 @@
 #include "sound_init.h"
 #include "rumble_init.h"
 
+s32 viewYaw;
 
 /**************************************************
  *                    ANIMATIONS                  *
@@ -1762,6 +1763,22 @@ s32 execute_mario_action(UNUSED struct Object *obj) {
             }
         }
 
+        if (gMarioState->forwardVel == 0) {
+            obj_set_model(gMarioObject, MODEL_MARIO_IDLE);
+        }
+
+        // i should've put this repo in wsl's user root directory not mnt :facepalm:
+
+        if (gMarioState->intendedYaw == gCamera->yaw - 0xC000) {
+            gMarioObject->oAnimState = 3;
+        } else if (gMarioState->intendedYaw == gCamera->yaw - 0x8000) {
+            gMarioObject->oAnimState = 2;
+        } else if (gMarioState->intendedYaw == gCamera->yaw - 0x4000) {
+            gMarioObject->oAnimState = 1;
+        } else if (gMarioState->intendedYaw == gCamera->yaw - 0x0000) {
+            gMarioObject->oAnimState = 0;
+        }
+
         sink_mario_in_quicksand(gMarioState);
         squish_mario_model(gMarioState);
         set_submerged_cam_preset_and_spawn_bubbles(gMarioState);
@@ -1804,6 +1821,8 @@ void init_mario(void) {
     gMarioState->actionTimer = 0;
     gMarioState->framesSinceA = 0xFF;
     gMarioState->framesSinceB = 0xFF;
+
+    viewYaw = gMarioState->intendedYaw;
 
     gMarioState->invincTimer = 0;
 

@@ -572,4 +572,12 @@
 #define MODEL_VCUTM_WARP_PIPE                     MODEL_LEVEL_GEOMETRY_16   // warp_pipe_geo
 #define MODEL_CASTLE_GROUNDS_WARP_PIPE            MODEL_LEVEL_GEOMETRY_16   // warp_pipe_geo
 
+#define MODEL_MARIO_IDLE    0xE4
+#define MODEL_MARIO_JUMP    0xE5
+#define MODEL_MARIO_FALL    0xE6
+#define MODEL_MARIO_FORWARDS 0xE7
+#define MODEL_MARIO_BACKWARDS 0xE8
+#define MODEL_MARIO_LEFT 0xE9
+#define MODEL_MARIO_RIGHT 0xEA
+
 #endif // MODEL_IDS_H

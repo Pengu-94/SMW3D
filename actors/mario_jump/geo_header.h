@@ -1,0 +1,12 @@
+extern const GeoLayout mario_jump_JumpRight_geo[];
+extern const GeoLayout mario_jump_geo[];
+extern u8 mario_jump_mjmp_ci4[];
+extern u8 mario_jump_mjmp_pal_rgba16[];
+extern Vtx mario_jump_JumpLeft_mesh_layer_4_vtx_0[4];
+extern Gfx mario_jump_JumpLeft_mesh_layer_4_tri_0[];
+extern Vtx mario_jump_JumpRight_mesh_layer_4_vtx_0[4];
+extern Gfx mario_jump_JumpRight_mesh_layer_4_tri_0[];
+extern Gfx mat_mario_jump_f3dlite_material_020[];
+extern Gfx mat_revert_mario_jump_f3dlite_material_020[];
+extern Gfx mario_jump_JumpLeft_mesh_layer_4[];
+extern Gfx mario_jump_JumpRight_mesh_layer_4[];
